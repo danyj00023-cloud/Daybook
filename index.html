@@ -1831,7 +1831,7 @@ function booksRead() {
     const rows = Array.from({ length: n }, (_, i) => `<tr>${cols.map((c, k) => cell(by[k][i], c)).join('')}</tr>`).join('');
     return `<section class="glass"><h2>Books I read · ${fin.length}</h2>${fin.length ? wTable(cols.map(c => `<th class="l">${c}</th>`).join(''), rows, cols.map((c, k) => `<td class="l">${by[k].length} book${by[k].length === 1 ? '' : 's'}</td>`).join('')) : '<div class="empty">When you finish a book (tap Finished or reach its last page) it appears here under its type.</div>'}</section>`;
 }
-function reading() { return subBar(RTAB, [['books', IC('books') + ' Books'], ['bible', IC('book') + ' Bible']], 'rtab') + (RTAB === 'bible' ? runCard() + bible() : books()); }
+function reading() { return subBar(RTAB, [['books', IC('books') + ' Books'], ['bible', IC('book') + ' Bible']], 'rtab') + (RTAB === 'bible' ? bible() : books()); }
 
 /* ---------- Ruach: ንባብ (reading) and ዜማ (chant) ---------- */
 const RU_T = [['Daily', 10], ['Monday', 9], ['Tuesday', 15], ['Wednesday', 8], ['Thursday', 7], ['Friday', 6], ['Saturday', 10], ['Sunday', 9], ['Gate of Light', 13], ['The Angels Praise Her', 3], ['The Image of Mary', 60], ['The Image of Jesus', 57]];
